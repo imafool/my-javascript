@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>你为什么要系统学习前端？特别是JavaScript！</title>
+    <script type="application/javascript">
+        //HTML的Document对象，有其属性和方法，是DOM对象
+            //declare var document: Document;
+        //getElementById()返回指定id的第一个对象的引用，就是DOM的一个节点
+        //Date()是JavaScript的Date对象，用于处理日期和时间
+        function displayNow(){
+            document.getElementById("demo").innerHTML = Date();
+        }
+    </script>
+</head>
+
+<body>
+  <h1>这是一个标题</h1>
+
+  <p id="demo">这是一段话！</p>
+
+  <!-- 定义了触发事件：onclick，即当点击按钮，会发生什么行为，具体的行为在JavaScript指定函数中定义 -->
+  <button type="button" onclick="displayNow()">
+    这是一个按钮，点击会在段落里显示当前系统时间
+  </button>
+</body>
+</html>
