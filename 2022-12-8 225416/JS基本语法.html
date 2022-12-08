@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>固定值，字面量啥的！</title>
+</head>
+<body>
+
+  <p id="demo1"></p>
+  <p id="demo2"></p>
+  <p id="demo3"></p>
+  <p id="demo4"></p>
+  <p id="demo5"></p>
+  <p id="demo6"></p>
+  <p id="demo7"></p>
+
+  <script>
+    //数字
+    document.getElementById("demo1").innerHTML = 123e5;
+
+    //字符串
+    document.getElementById("demo2").innerHTML = "这是一个字符串";
+
+    //表达式
+    document.getElementById("demo3").innerHTML = 1 + 1;
+    document.getElementById("demo4").innerHTML = 25 * 12;
+
+    //数组
+    document.getElementById("demo5").innerHTML = [7, 10, 25, 60];
+
+    //对象
+    document.getElementById("demo6").innerHTML = {firstName: "Jack", lastName: "Done", age:50, eyeColor:"blue"};
+
+    //函数
+    document.getElementById("demo7").innerHTML = myFunc(60, 12);
+
+    function myFunc(a, b) {
+      return a * b;
+    }
+
+    //变量
+    var a, b, c;
+    a = 1;
+    b = 2;
+    c = 3;
+    alert(myFunc(a, b) + myFunc(b, c)); //1+2 + 2+3
+
+    //运算符
+    //算术-赋值-位运算：+-*/=
+    //条件-比较-逻辑：== != < >
+
+    //关键字
+
+    //注释
+
+    //数据类型：数字 Number，字符串 String，数组 Array，对象 Object
+    testStr = 16 + "Volvo";
+    alert(testStr);
+
+    //大小写
+
+    //函数
+
+    //字符集
+  </script>
+
+</body>
+</html>
