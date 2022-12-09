@@ -4,15 +4,15 @@
 3. 严格模式 | 2022年12月9日 14:57:16 √
 4. 运算符（算术，比较） |  2022年12月9日 15:27:36 √
 5. 语句（条件，switch，for，while，break，continue）|  2022年12月9日 15:27:50 √
-6. 作用域，函数，事件 2022年12月9日 16:46:26 TODO
+6. 作用域，函数，事件 2022年12月9日 22:30:49 √
 7. 错误，调试 | 2022年12月9日 15:52:48 √
 8. 正则表达，AJAX | 2022年12月9日 15:52:57 √
 
 2022-12-9 00:58:39 NEXT 周六日 Order By：Function，Class，DOM
-1. 函数定义，参数，调用，闭包
-2. 类，继承，静态方法
-3. JavaScript对象：
-   (1)prototype，Number/String/Date/Array/Boolean/Math/RegExp
+1. 函数定义，参数，调用，闭包 2022年12月9日 22:50:43 √
+2. 类，继承，静态方法 2022年12月9日 22:50:53 √
+3. JavaScript对象：2022年12月9日 22:51:05 √
+   (1)prototype，Number/String/Date/Array/Boolean/Math/RegExp 2022年12月9日 22:52:03 √
 4. HTML DOM：
    (1)DOM HTML，DOM CSS
    (2)DOM Event，DOM EventListener

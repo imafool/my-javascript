@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数与事件，都输入几遍了！汗！！</title>
+</head>
+<body>
+  <p id="p1"></p>
+
+
+  <script>
+
+    /**
+     * JS函数，是由事件驱动的！意思就是函数是被调用的时候执行的，可以重复利用的代码块！
+     * 函数语法很简单的：
+     */
+
+    function myfunc(){
+      alert("我是一个函数，我的名字交myfunc()")
+      return "我是函数执行结束返回的一个值！"
+    }
+
+    function myPlus(a, b){
+      return a + b;
+    }
+
+    document.getElementById("p1").innerHTML = myPlus(5, 5)
+  </script>
+
+</body>
+</html>
