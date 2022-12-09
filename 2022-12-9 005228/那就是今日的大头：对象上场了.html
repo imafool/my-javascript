@@ -6,5 +6,43 @@
 </head>
 <body>
 
+    <script>
+        /**
+         * 哈哈，在JavaScript中几乎所有的事物都是对象！
+         * 变量的容器，随你怎么说！！
+         */
+        var car = {
+            name:"Audi",
+            model:500,
+            color:"white"
+        };
+
+        var person = {
+            firstName:"John",
+            lastName:"Doe",
+            age:50,
+            eyeColor:"blue",
+            eat(){
+                return "吃！"
+            }
+        };
+
+        /**
+         * 访问属性
+         * @type {string}
+         */
+        let carName = car.name;
+        alert(carName);
+        let PersonAge = person.age;
+        alert(PersonAge);
+
+        /**
+         * 访问方法
+         */
+        let methodReturn = person.eat();
+        alert(methodReturn);
+
+    </script>
+
 </body>
 </html>

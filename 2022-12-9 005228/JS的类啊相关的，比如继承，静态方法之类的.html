@@ -6,5 +6,56 @@
 </head>
 <body>
 
+    <p id="dogEat"></p>
+    <p id="dogSleep"></p>
+    <p id="dogWang"></p>
+
+    <p id="staticMethod"></p>
+
+    <script>
+        //就没啥好说的！
+        /**
+         * 1. 什么声明类
+         * 2. 类的属性和方法
+         * 3. 构造方法
+         * 4. new一个对象
+         * 5. 类相关关键字：extends，static，super啥的
+         * 6. 基本上都需要strict mode下
+         * 7. 类声明不会提升，所以注意声明顺序！
+         */
+        class Animal {
+            eat(){
+                return "hong hong hong!"
+            };
+            sleep(){
+                return "heng heng heng!"
+            };
+        }
+
+        class Dog extends Animal{
+            wang(){
+                return "wang wang wang";
+            };
+        }
+
+        let dog = new Dog();
+        document.getElementById("dogEat").innerHTML = dog.eat();
+        document.getElementById("dogSleep").innerHTML = dog.sleep();
+        document.getElementById("dogWang").innerHTML = dog.wang();
+
+
+        //静态方法
+        /**
+         * 一样的，就是类的方法，直接用类调用即可！没什么说的，上demo！
+         */
+        class MyStaticClass{
+            static myMethod(){
+                return "My static Method!";
+            }
+        }
+        document.getElementById("staticMethod").innerHTML = MyStaticClass.myMethod();
+
+    </script>
+
 </body>
 </html>
