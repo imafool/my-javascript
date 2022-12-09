@@ -1,10 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>就是函数相关的这些</title>
 </head>
 <body>
-$END$
+
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+    <p id="p4"></p>
+    <p id="p5"></p>
+    <p id="p6"></p>
+
+    <p id="timer"></p>
+
+    <!--  为啥放在头部就不行  -->
+    <script>
+        //自调用函数
+        (function selfCall(){
+            alert("我调用我自己");
+            alert(myFunc(1, 2));
+        })();
+
+        //函数可以看作一个对象：有属性，有方法
+        function myFunc(a, b){
+            return arguments.length; //函数接收到参数的个数，JS内置了arguments对象
+        }
+
+        //ES6新增了箭头函数
+        const aFunc = (a) => a;
+
+        const a2Func = (a, b) => a+b;
+
+        //可以自带默认参数，就想Python样
+        const a3Func = (x, y, z=100) => x+y+z;
+
+        function a4Func (a, b, c, d){
+          if (arguments.length < 1 || arguments.length > 4){
+              return "参数不合法";
+          }else{
+              return a+b+c+d; //假装传齐了！
+          }
+        };
+
+        document.getElementById("p1").innerHTML = aFunc("aaa");
+        document.getElementById("p2").innerHTML = a2Func("aaa", "bbb");
+        document.getElementById("p3").innerHTML = a3Func(0, 0);
+
+        document.getElementById("p4").innerHTML = a4Func();
+        document.getElementById("p5").innerHTML = a4Func(0, 1, 2, 3, 4);
+        document.getElementById("p6").innerHTML = a4Func(0, 1, 2, 3);
+
+
+        //4种函数调用方式
+        /**
+         * （1）作为函数调用！
+         * HTML默认全局对象是页面，函数属于页面，在浏览器中页面对象是窗口window，所以函数默认是window的函数
+         */
+        function myFuntion(x, y){
+            return x*y;
+        }
+        // window.myFuntion(200, 200);
+        myFuntion(200, 200); //意思是一个概念
+
+        /**
+         * （2）作为全局对象，也就是全局变量！
+         * window作为变量容易造成崩溃
+         */
+        function myFunction1(){
+            return this; //返回的window对象
+        }
+        myFunction1();
+
+        /**
+         * (3)作为方法被调用！
+         * 将函数作为对象的方法
+         */
+        var myObject = {
+            xing: "hu",
+            ming: "wenfei",
+            xingming: function (){
+                return this.xing + " " + this.ming;
+            }
+        };
+        alert(myObject.xingming());
+
+        /**
+         * (4)构造函数
+         */
+        function myObjectConstructor(arg1, arg2){
+            this.xing = arg1;
+            this.ming = arg2;
+        }
+        var myObj = new myObjectConstructor("hu", "wenfei");
+        myObj.ming;
+
+
+        //闭包：我只想搞懂又取了个什么新名字！搞得花里胡哨。
+        /**
+         * 计数器困境：
+         * 1. 你说设置成全局变量吧，每个函数都可以修改，不安全
+         * 2. 你说设置成局部变量吧，又怕没被调用，不起作用
+         * 3. 那就设计成：函数内嵌函数，让内嵌函数去操作函数的私有/本地变量
+         */
+        function timer(){
+            var counter = 0;
+            function add(){ //内嵌函数
+                return counter += 1;
+            }
+            add(); //调用内嵌函数，计数器+1
+            return counter; //返回最终
+        }//这就是闭包！
+
+        document.getElementById("timer").innerHTML = timer();
+
+    </script>
+
 </body>
 </html>
