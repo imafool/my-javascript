@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>好像以前学过这些的！</title>
+</head>
+<body>
+
+    <h1 id="h11">
+        变量声明
+    </h1>
+    <p id="p1">
+
+    </p>
+
+    <h1 id="h12">
+        数据类型
+    </h1>
+    <p id="p2">
+
+    </p>
+
+    <h1 id="h13">
+        动态类型
+    </h1>
+    <p id="p3">
+
+    </p>
+
+    <h1>
+        JS字符串
+    </h1>
+
+    <h1>
+        JS数字：就是数字，极大或者极小的数字可以用科学计数法写：10e5 10e-5
+    </h1>
+
+    <h1>
+        JS Boolean：两个值
+    </h1>
+
+    <h1>
+        JS数组：和Java类似，1.new Array，通过下标添加元素 2.Array对象直接构造 3.直接定义
+    </h1>
+
+    <h1>
+        类似JSON串，访问对象属性两种方式：obj.key, obj[key]
+    </h1>
+
+    <h1>
+        Undefined 和 Null
+    </h1>
+    <p>
+        null和undefined的值相等，但是类型不同：null是object类型，undefined是undefined类型
+    </p>
+
+    <h1 style="color: deeppink">
+        声明变量的时候可以只声明类型
+    </h1>
+
+    <script>
+        var a, b, c;
+        var lastname="huwenfei", firstname="liwenfei", job="fengfeifei";
+        var d, e, f = 1; //d e类型为undefined
+        var f = "11";
+        // alert(f);
+        var f;
+        // alert(f); //还是11，可以理解为：可以被覆盖，除了undefined
+
+        //2015年后的ES6，允许使用 const 和 let
+        //const：定义一个常量
+        //let：作用域内的变量
+
+        let str1 = "基本类型：String，Number，Null，Boolean，Undefined，Symbol（ES6新增，声明独一无二的值）";
+        let str2 = "引用类型：Object，Array，Function，RegExp，Date";
+        document.getElementById("p1").innerHTML = "基本的值类型：" + str1 + "<br>" + "引用对象类型：" + str2 + "<br>";
+
+        var x1;
+        var x2 = 5;
+        var x3 = 'Jojo';
+        document.getElementById("p2").innerHTML =
+            typeof x1 + "<br>" + typeof x2 + "<br>" + typeof x3 + "<br>";
+
+        document.getElementById("p3").innerHTML =
+            typeof "Jojo" + "<br>" +
+            typeof 3.14 + "<br>" +
+            typeof false + "<br>" +
+            typeof [1, 2, 3, 4] + "<br>" +
+            typeof {name: 'huwenfei', age: 89} + "<br>"
+
+    </script>
+
+</body>
+</html>
