@@ -1,0 +1,27 @@
+2022-12-9 00:52:17 周五日 Order By：BASE
+1. 数据类型（对象，字符串，typeof） |  2022年12月9日 10:40:39 √
+2. 变量，变量提升，this，let，const，JSON，void |  2022年12月9日 14:52:04 √
+3. 严格模式 | 2022年12月9日 14:57:16 √
+4. 运算符（算术，比较） |  2022年12月9日 15:27:36 √
+5. 语句（条件，switch，for，while，break，continue）|  2022年12月9日 15:27:50 √
+6. 作用域，函数，事件 2022年12月9日 22:30:49 √
+7. 错误，调试 | 2022年12月9日 15:52:48 √
+8. 正则表达，AJAX | 2022年12月9日 15:52:57 √
+
+2022-12-9 00:58:39 NEXT 周六日 Order By：Function，Class，DOM
+1. 函数定义，参数，调用，闭包 2022年12月9日 22:50:43 √
+2. 类，继承，静态方法 2022年12月9日 22:50:53 √
+3. JavaScript对象：2022年12月9日 22:51:05 √
+   (1)prototype，Number/String/Date/Array/Boolean/Math/RegExp 2022年12月9日 22:52:03 √
+
+4. HTML DOM：
+   (1)DOM HTML，DOM CSS
+   (2)DOM Event，DOM EventListener
+   (3)DOM元素
+   (4)HTML Collection对象，NodeList对象
+5. Browser BOM：
+   (1)Window（Screen，Location，History，Navigator）
+   (2)弹窗，计时事件，Cookie
+
+2022年12月9日 01:07:00 NEXT 周日日 Order By：jQuery，Layui，ProjCode
+2022年12月9日 01:07:54 NEXT NEXT: Vue,React,ProjTool
