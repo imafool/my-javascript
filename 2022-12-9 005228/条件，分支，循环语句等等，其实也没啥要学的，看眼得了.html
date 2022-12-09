@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>就是语句</title>
+</head>
+<body>
+    <script>
+        //if..else没啥要说的咯
+        var a = 1;
+        if (a < 2){
+            a = 2;
+        }
+        alert(a);
+
+        //switch..case..break也没啥好讲的，写一个测试案例得了
+        var date = new Date().getDay();
+        var n;
+        const omygod = ":(";
+        const msg = "哇塞，星期五了耶~~";
+        switch (date){
+            case 1:
+                n=date;
+                break;
+            case 2:
+                n=date;
+                break;
+            case 3:
+                n=date;
+                break;
+            case 4:
+                n=date;
+                break;
+            case 5:
+                n=date;
+                break;
+        }
+        if (n == 1){
+            alert(omygod);
+        }
+        if (n == 5){
+            alert(msg);
+        }
+
+        //for循环
+        function myForin(){
+            var cars = ["audi", "das", "benz"];
+            for (let i = 0; i < cars.length; i++) {
+                document.write(i + " " + cars[i] + "<br>");
+            }
+        }
+        //for-in循环
+
+        //while循环
+        function myWhile(){
+            let i = 0;
+            while(i < 5){
+                i++;
+            }
+            document.getElementById("p1").innerHTML = i;
+        }
+
+        //do..while循环
+        function myDowhile(){
+            let i = 0;
+            do{
+                i++;
+            }while (i < 5)
+            document.getElementById("p2").innerHTML = i;
+        }
+
+    </script>
+
+    <p id="p1"></p>
+    <button onclick="myWhile()">
+        Click1
+    </button>
+
+    <p id="p2"></p>
+    <button onclick="myDowhile()">
+        Click2
+    </button>
+</body>
+</html>

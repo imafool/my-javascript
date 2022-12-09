@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>就是基础的最后面的东西了，然后就是NEXT LEVEL</title>
+</head>
+<body>
+    <input type="button" value="See Details >>" onclick="seeMsg()">
+    <input type="button" value="See Details2 >>" onclick="seeMsg2()">
+
+    <script>
+        var text = "";
+        function seeMsg(){
+            try {
+                debugger;
+                adddlert(""); //哈哈，故意写错！
+            }catch (err){
+                alert("123456788!");
+            }finally {
+                alert("XXXXXXX");
+            }
+        }
+
+        function seeMsg2(){
+            try {
+                const y = 2; //测试数据
+                if (y == 2) throw "其实没有错，我故意报错的~~~~~~";
+            }catch (err){
+                alert(err); //捕获
+            }
+        }
+    </script>
+</body>
+</html>
