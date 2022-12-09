@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>let，const，JSON，void</title>
+</head>
+<body>
+    <h1>
+        全局作用域
+    </h1>
+    <h1>
+        局部作用域
+    </h1>
+    <h1>
+        块级作用域
+    </h1>
+
+    <h1>
+        var 和 let：
+    </h1>
+    <p>var一般是可以覆盖的</p>
+    <p>同级别var和let不能相互重置</p>
+    <p>同级别let不能重置let变量，不同级别可以重置。可以说let就是块级别的</p>
+
+    <h1>const</h1>
+    <p>const表面上是声明常量，是不可变的，通过const定义的数组和对象其实是可变的，比如可以通过属性或者索引位置进行覆盖，实质上是定义了一个常量，这个常量引用了一个值！</p>
+
+    <h1>
+        JSON：没啥好说的！
+    </h1>
+
+    <h1>
+        void
+    </h1>
+    <p>javascript: void function()计算一个表达式，但是不返回任何结果</p>
+    <p>href=# 和 href=javascript:void(0)的区别：</p>
+    <li>前面是锚点，用过的，比如一个文档比较长，可以用锚点进行定位，默认锚点是#top页面顶部</li>
+    <li>后者只代表一个死链接，但是如果需要弹出东西，还是可以再void中编辑的，意思是void修饰，要被执行的，但是并不返回！</li>
+    <li></li>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>This关键字</title>
+</head>
+<body>
+  <div>
+    拼接全名称：<span id="thisKey"></span>
+  </div>
+
+  <script>
+    var person = {
+      id: 100,
+      xing: "hu",
+      ming: "wenfei",
+      quanming: function (){
+        return this.xing + this.ming;
+      }
+    };
+    document.getElementById("thisKey").innerHTML = person.quanming();
+
+    //TODO 基本就是那样，用就完了，具体细节回头再说！
+    /**
+     * 1. 在方法中
+     * 2. 单独用
+     * 3. 函数中
+     * 4. 事件中
+     * 严格模式
+     */
+  </script>
+</body>
+</html>
