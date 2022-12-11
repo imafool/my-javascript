@@ -1,0 +1,14 @@
+BOM: Browser Object Model!!浏览器对象模型。
+
+Window对象：JS全局变量是window的属性，JS全局函数是window的方法。
+window.document.getElementById("header");
+document.getElementById("header"); //同上！DOM的document也是window的属性
+
+window：
+1. window的尺寸和方法这些
+
+TODO 有时间搞 有些写起来不用window这个前缀
+2. window.screen对象包含有关用户屏幕的相关信息，属性：可用宽度、可用高度这些
+3. window.location对象用于获取当前页面的URL，并重定向到新的页面
+4. window.history对象包含浏览器的历史
+5. window.navigator对象包含有关用户浏览器的相关信息
