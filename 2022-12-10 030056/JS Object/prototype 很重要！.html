@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对象和原型</title>
+</head>
+<body>
+
+<script>
+    /**
+     * JS中所有事物都是对象！
+     *
+     * 允许自定义对象！
+     *
+     * JS内置多中对象：String、Array、Date...
+     *
+     * 对象是啥？ 无非就是带有属性和方法的特殊的数据类型，对于我这个Javaer来说，一点都不特殊！
+     */
+
+    //创建对象的两种方式：
+    //1
+    let object = new Object(true);
+    alert(typeof object);
+    alert(object);
+
+    //2
+    let b = Boolean(true);
+    alert(object == b); //true
+    alert(object === b); //false
+
+    let person = new Object();
+    person.firstName = "hu";
+    person.lastName = "wenfei";
+    person.age = 800;
+    person.otherName = "PengShang";
+    document.write(person.firstName + person.lastName + " is " + person.age + " years old. His other name is " + person.otherName + "<br>");
+
+    //直接JSON格式的字面量
+    let dan = {
+        fullName: "WuDan",
+        age: 18
+    }
+    document.write(dan.fullName + ", a little girl, is " + dan.age + " years old." + "<br>");
+
+    function Human(firstname,lastname,age){
+        this.firstname=firstname;
+        this.lastname=lastname;
+        this.age=age;
+
+        function fullName(){
+            return this.firstname + this.lastname;
+        }
+    }
+    let littleChild = new Human("Hu", "Kexin", 6.5);
+    document.write(littleChild.firstname + littleChild.lastname + " is " + littleChild.age + " years old." + "<br>");
+    document.write(Human.fullName());
+
+
+    /**
+     * 说了这么多，你跟我说，JS不会创建类，也不会通过类创建对象
+     * 而是基于prototype的
+     *
+     * 对象是可变的，通过引用来传递！
+     *  var x = person;  // 不会创建 person 的副本，是引用
+     *  如果修改 x ，person 的属性也会改变：
+     */
+
+    //所有的JS对象都会从一个prototype中继承属性和方法 TODO 不生效
+    let littleLittleChild = new Human("Hu", "Yiyi", 2.5);
+    Human.prototype.hahaAttr;
+    littleLittleChild.hahaAttr = "heihei";
+    document.write(littleLittleChild.hahaAttr + "<br>");
+
+</script>
+
+</body>
+</html>
