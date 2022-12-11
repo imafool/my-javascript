@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS的能力-1</title>
+</head>
+<body>
+
+  <h1 id="h11">内容</h1>
+
+</body>
+</html>
+
+<script>
+
+
+  document.getElementById("h11").innerHTML = "覆盖内容";
+
+  document.write(Date()); //动态内容，会覆盖DOM（加载完成之后） TODO 那么什么时候DOM加载完成呢？
+
+  document.getElementById("h11").style = "color: red"; //这就改变CSS了
+
+  document.getElementById("h11").innerHTML = "覆盖内容2";
+
+  document.getElementById("h11").style.color = "green"; //这就改变CSS了
+</script>

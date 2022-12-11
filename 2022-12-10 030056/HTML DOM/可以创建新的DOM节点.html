@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>创建新的DOM节点</title>
+</head>
+<body>
+
+  <div id="myDiv">
+
+  </div>
+
+
+<script>
+  /**
+   * 创建一个新的节点，并追加
+   * @type {HTMLParagraphElement}
+   */
+  let newNode = document.createElement("p"); //创建元素节点
+  newNode.setAttribute("id", "p1");
+  let textNode = document.createTextNode("我是新Node的内容Node"); //创建元素节点的内容节点
+  newNode.appendChild(textNode); //组合
+
+  let myDiv = document.getElementById("myDiv"); //获取元素
+  myDiv.appendChild(newNode); //追加新组合
+</script>
+
+<script>
+  /**
+   * TODO 不生效
+   * @type {HTMLElement}
+   */
+  let myDiv = document.getElementById("myDiv");
+  let originP = myDiv.getElementById("p1");
+  alert(originP);
+
+  let pNewNode = document.createElement("p");
+  pNewNode.setAttribute("id", "p2");
+  let textNode1 = document.createTextNode("BeforeNode,insert !");
+  pNewNode.appendChild(textNode1);
+
+  myDiv.insertBefore(pNewNode, originP);
+</script>
+
+<script>
+  /**
+   * 当然，也可以移除：removeChild()
+   */
+</script>
+
+<script>
+  /**
+   * 当然，也可以替换：replaceChild()
+   */
+</script>
+
+</body>
+</html>

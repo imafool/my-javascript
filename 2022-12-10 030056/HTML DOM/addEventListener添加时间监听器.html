@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动态添加事件监听器，添加事件句柄</title>
+</head>
+<body>
+
+  <p id="p1">
+    JS里给我添加了相应的事件和处理函数，不信你可以看我源代码！
+  </p>
+
+  <script>
+    //可以向任何DOM元素添加，可以添加多个！
+
+    /**
+     * 哈哈，这样不就能解耦合了！
+     * 就是连事件都不用写在HTML里面了
+     */
+
+    //相应的，remove可以移除相应句柄！
+
+
+    //TODO 第一个参数 type是有定义的
+    document.getElementById("p1").addEventListener("mouseover", function (){
+      this.innerHTML = "你的鼠标已经在我上边了！"
+    });
+
+    //也可以这样写
+    document.getElementById("p1").addEventListener("mouseout", out);
+    function out(){
+      this.innerHTML = "你的鼠标已经离开我了"
+    }
+
+    //以上函数里可以传递参数！！
+
+    //也可以给window对象添加事件句柄
+
+
+    //TODO 第三个参数，可选 ，代表事件传递的方式：冒泡 OR 捕获 useCapture
+    //TODO 默认false即冒泡传递，改为true时是捕获
+  </script>
+</body>
+</html>

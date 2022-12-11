@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS开始处理事件了，事件是HTML的事件</title>
+</head>
+<body onload="check()" onunload="check2()">
+
+  <h1 onclick="this.innerHTML = '哈哈哈，你被骗了！'">
+    请点击 >>
+  </h1>
+
+  <h1 onclick=haha()>
+    请点击 >>
+  </h1>
+
+  <p>
+    这是一段测试文本！
+  </p>
+
+  <a href="https://cctv.com">
+    https://cctv.com
+  </a>
+  <br>
+  <br>
+  <br>
+
+  请输入字母：
+  <input type="text" id="toUpper" onchange="toUpper()">
+  我即将把输入全部转成大写！
+
+  <br>
+  <br>
+  <br>
+
+  <div style="background-color:#D94A38; width:120px; height:20px; padding:40px;"
+       onmouseover="over(this)"
+       onmouseout="out(this)"
+
+       onmousedown="down(this)"
+       onmouseup="up(this)"
+       onclick="click(this)"
+
+       onfocus="focus(this)">
+    Mouse Over！
+  </div>
+
+
+  <script>
+    function haha(){
+      alert('哈哈哈，你又被骗了！');
+    }
+
+    function check(){
+      //onload 进入页面的时候触发
+      alert("我是onload的时候触发的！");
+    }
+
+    function check2(){
+      //TODO 离开页面触发，什么是离开页面呢？关闭不行啊
+      alert("我是onunload的时候触发的！");
+    }
+
+
+
+    function toUpper(){
+      let inputTag = document.getElementById("toUpper");
+      inputTag.value = inputTag.value.toUpperCase();
+    }
+
+
+
+    function over(obj){
+      obj.innerHTML = "我知道你的鼠标已经在我的上方了！";
+    }
+
+    function out(obj){
+      obj.innerHTML = "我知道你的鼠标已经离开了我！！";
+    }
+
+    function down(obj){
+      obj.innerHTML = "你点下了鼠标！！！";
+    }
+
+    function up(obj){
+      obj.innerHTML = "你松开了鼠标！！";
+    }
+
+    function click(obj){
+      obj.innerHTML = "你刚刚点击了鼠标，也就是：down和up一起组成了click！！";
+    }
+
+
+
+  </script>
+</body>
+</html>
