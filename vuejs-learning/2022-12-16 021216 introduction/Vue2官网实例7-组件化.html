@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>组件化</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+    <p>原始P段落。</p>
+    <br>
+    <!--2.用自定义的组件来构建页面-->
+    <div id="app"> <!--4.数据绑定到模版中的属性-->
+        <ol>
+            <myComponent
+                    v-for="item in items"
+                    v-bind:itemProp="item"
+                    v-bind:keyProp="item.id"
+            ></myComponent>
+        </ol>
+    </div>
+
+    <script>
+        //1.创建一个Vue组件
+        Vue.component('myComponent', {
+            //3.现在让我的组件接受一些属性
+            props: ['itemProp'],
+            template: `<li>{{itemProp.text}}</li>`
+        })
+
+        //5.声明就绪，开始填充数据吧应该
+        let vue = new Vue({
+            el: '#app',
+            data: {
+                items: [
+                    {id: 0, text: '一号元素'},
+                    {id: 1, text: '二号元素'},
+                    {id: 2, text: '三号元素'}
+                ]
+            }
+        })
+
+        //Sum:
+        /**
+         * 具体流程是不是可以这样理解？
+         * 1. 数据来源在Vue实例里
+         * 2. 数据被声明和引用到模版里
+         * 3. 模版被用在页面结构里
+         */
+
+    </script>
+
+</body>
+</html>

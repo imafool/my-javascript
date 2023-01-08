@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>绑定属性</title>
+  <script src="../vue.js"></script>
+</head>
+<body>
+
+  <div id="vue2-case2">
+      <span v-bind:title="msg">
+        这是一段话呗！
+      </span>
+  </div>
+
+  <script>
+    let vueApp2 = new Vue({
+      el: '#vue2-case2',
+      data: {
+        msg: '这是动态更新的内容：' + new Date().toLocaleString() //绑定到 标签内容的提示信息属性
+      }
+    });
+  </script>
+
+</body>
+</html>

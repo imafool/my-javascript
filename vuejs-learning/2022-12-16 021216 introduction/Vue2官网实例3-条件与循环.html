@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>条件与循环</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+
+    <div id="app">
+        <p v-if="ifShow">
+            条件控制的！
+        </p>
+    </div>
+
+    <script>
+        let vue = new Vue({
+            el: '#app',
+            data: {
+                ifShow: true
+            }
+        });
+    </script>
+
+</body>
+</html>

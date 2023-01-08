@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>来学习表格啦！</title>
+    <style>
+      /* 边框 */
+      td {
+        border: 1px solid orange; /* solid：实线 */
+        text-align: right;
+        vertical-align: bottom; /* 垂直对齐 */
+        height: 20px;
+        padding: 15px; /* 表格填充：就是内容和表格边 */
+
+      }
+
+      thead {
+        background-color: blueviolet;
+        color: white;
+      }
+
+      table {
+        border-collapse: collapse; /* 边框折叠 */
+        width: 100%;
+      }
+
+    </style>
+</head>
+<body>
+  <table>
+    <thead>
+      <th>Firstname</th>
+      <th>Lastname</th>
+    </thead>
+    <tr>
+      <td>Peter</td>
+      <td>Griffin</td>
+    </tr>
+    <tr>
+      <td>Lois</td>
+      <td>Griffin</td>
+    </tr>
+  </table>
+</body>
+</html>

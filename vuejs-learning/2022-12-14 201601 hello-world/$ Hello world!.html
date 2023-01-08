@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>算是开始学习Vue</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+
+
+    <div id="app">
+        <!-- 先准备一个容器 -->
+        <p>
+            Hello, {{content}}
+        </p>
+    </div>
+
+
+    <script>
+        Vue.config.productionTip = false; //Vue.config是一个全局对象，这里设置了关闭生产环境提示，可以修改的
+        <!-- Vue实例绑到容器(严格1:1，先入为主)，为容器提供数据 -->
+        const vue = new Vue({
+            el: '#app',
+            data: {
+                content: 'World!'
+            }
+        })
+
+    </script>
+
+</body>
+</html>

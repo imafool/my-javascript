@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+
+    <div id="app">
+        <p>{{msg}}</p>
+        <button v-on:click="handleMsg">Vue的事件处理</button>
+    </div>
+
+    <script>
+        let vue = new Vue({
+            el: '#app',
+            data: {
+                msg: '这是原始消息！'
+            },
+            methods: {
+                handleMsg: function () {
+                    this.msg = this.msg + ' - 通过绑定点击事件之后啊，处理过的消息！'
+                }
+            }
+        })
+    </script>
+
+</body>
+</html>

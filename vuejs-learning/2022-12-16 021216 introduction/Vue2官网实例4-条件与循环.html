@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>条件与循环</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+
+    <div id="app">
+        <ol>
+            <li v-for="item in items">
+                {{item.text}}
+            </li>
+        </ol>
+    </div>
+
+    <script>
+        let vue = new Vue({
+            el: '#app',
+            data: {
+                items: [
+                    {text: '学JS'},
+                    {text: '学Vue'},
+                    {text: '写Bug'},
+                    {text: '修Bug'}
+                ]
+            }
+        });
+
+        //可以的调用
+        vue.items.push({text: '这是操作API新增的项！'})
+    </script>
+
+</body>
+</html>

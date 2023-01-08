@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>就是背景图片啊</title>
+
+    <style>
+      body {
+        background-image: url("https://static.runoob.com/images/mix/paper.gif");
+        background-image: url("https://static.runoob.com/images/mix/gradient2.png");
+
+        background-repeat: repeat-x; /*水平方向平铺，即是否重复，以及如何重复*/
+
+        /*不平铺，并设置为知*/
+        background-image:url('https://static.runoob.com/images/mix/img_tree.png');
+        background-repeat: no-repeat; /*不平铺*/
+        background-position: right top; /*起始位置：右侧顶部*/
+        margin-right: 500px; /*与右侧margin200像素， 没有效果*/
+      }
+    </style>
+</head>
+<body>
+
+    <!--复制内容-->
+    <h1>Hello World!</h1>
+    <p>背景图片不重复，设置 position 实例。</p>
+    <p>背景图片只显示一次，并与文本分开。</p>
+    <p>实例中还添加了 margin-right 属性用于让文本与图片间隔开。</p>
+
+</body>
+</html>

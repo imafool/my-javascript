@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>链接有哪些样式呢？</title>
+  <style>
+    /*
+
+    同样可以用 background-color 设置背景色
+
+    */
+    a:link {
+      color: red; /* 还没有访问的 */
+    }
+
+    a:visited {
+      color: yellow; /* 访问过的 */
+    }
+
+    a:hover { /* 需要在前二者后边 */
+      color: green; /* 鼠标过境 */
+    }
+
+    a:active { /* 跟在第三者后边 */
+      color: blue; /* 鼠标点击 */
+    }
+
+    a {
+      text-decoration: none; /* 文本修饰：去掉下划线 */
+    }
+  </style>
+</head>
+<body>
+
+  <h1>颜色，字体，背景</h1>
+
+  <a href="https://bilibili.com">https://bilibili.com</a><br>
+
+</body>
+</html>

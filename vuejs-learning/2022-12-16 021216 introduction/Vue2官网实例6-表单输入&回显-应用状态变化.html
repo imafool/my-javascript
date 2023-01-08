@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-model</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+
+    <div id="app">
+        <p>{{ msg }}</p>
+        <input v-model="msg"> <!-- 这里将输入绑到目的位置，双向的喂 -->
+    </div>
+
+    <script>
+        let vue = new Vue({
+            el: '#app',
+            data: {
+                msg: '这是原始消息！'
+            }
+        })
+    </script>
+
+</body>
+</html>
