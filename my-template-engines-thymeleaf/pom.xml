@@ -9,7 +9,7 @@
         <relativePath/>
     </parent>
     <groupId>com.coco</groupId>
-    <artifactId>thymeleaf</artifactId>
+    <artifactId>my-template-engines-thymeleaf</artifactId>
     <version>0.0.1</version>
     <properties>
         <java.version>1.8</java.version>
