@@ -37,9 +37,9 @@ var webpackConfig = merge(baseWebpackConfig, {
       },
       sourceMap: true
     }),
-    // extract css-layouts into its own file
+    // extract my-css into its own file
     new ExtractTextPlugin({
-      filename: utils.assetsPath('css-layouts/[name].[contenthash].css-layouts')
+      filename: utils.assetsPath('my-css/[name].[contenthash].my-css')
     }),
     // Compress extracted CSS. We are using this plugin so that possible
     // duplicated CSS from different components can be deduped.
